@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swal2-popup {padding: 1.7em 0!important; min-width: 288px;}
+.swal2-title {font-size: 17px!important; color: #000 !important; padding: 0 !important; letter-spacing: -1px;}
+.swal2-styled{background-color: rgb(255, 96, 41); padding: 0.7em 0; min-width: 130px; width: 100% !important;}
+.swal2-popup .swal2-styled:focus { box-shadow: none !important;}
+.swal2-actions {margin: 0.8em auto 0 !important; width: 300px !important;  flex-wrap: nowrap !important;}
+.swal2-cancel {background-color:  #6e7881;}
+
+@media screen and (max-width:480px) {
+  .swal2-title {font-size: 15px!important;}
+}
