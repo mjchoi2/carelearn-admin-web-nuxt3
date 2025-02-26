@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       clientSecret: process.env.CLIENT_SECRET,
     },
   },
-  modules: ['@sidebase/nuxt-auth'],
+  modules: ['@sidebase/nuxt-auth', '@pinia/nuxt'],
   auth: {
     originEnvKey: 'BASEURL',
     provider: {

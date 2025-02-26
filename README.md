@@ -109,6 +109,11 @@ npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-pl
 
 - sidebase/nuxt-auth 라이브러리를 통해 로그인관리 
 
+## pinia 사용
+
+- pinia 라이브러리를 통해 상태 관리
+- stores 폴더 필요
+
 
 # Nuxt Minimal Starter
 
