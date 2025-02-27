@@ -84,6 +84,7 @@ const email = ref('');
 const password = ref('');
 const router = useRouter();
 const authToken = useCookie('auth._token.local'); // 토큰을 쿠키에 저장(silveredunet site의 로그인 연동을 위한 쿠키 명 통일)
+const authStrategy = useCookie('auth.strategy');
 
 const login = async () => {
   try {
@@ -110,6 +111,7 @@ const login = async () => {
 
     if (data.value?.token) {
       authToken.value = 'Bearer ' + data.value.token; // 로그인 성공 시 토큰 저장
+      authStrategy.value = 'local';
       console.log('로그인 성공:', data.value);
       router.push('/'); // 로그인 성공 후 홈으로 이동
     } else {

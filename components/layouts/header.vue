@@ -174,10 +174,10 @@
                 >
                 <a
                   id="user-menu-item-2"
-                  href="#"
                   class="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabindex="-1"
+                  @click="handleLogout"
                   >Sign out</a
                 >
               </div>
@@ -217,8 +217,17 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup lang="ts">
+const auth = useAuth();
+
+const handleLogout = async () => {
+  try {
+    await auth.signOut({ redirect: false }); // 로그아웃 실행
+    navigateTo('/auth/login'); // 로그아웃 후 이동할 페이지 설정
+  } catch (error) {
+    console.error('로그아웃 실패:', error);
+  }
+};
 </script>
 
 <style scoped></style>
